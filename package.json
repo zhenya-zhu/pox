@@ -1,0 +1,25 @@
+{
+  "name": "pow",
+  "version": "0.0.1",
+  "description": "a command line tool to manage proxy setting",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "pox": "index.js"
+  },
+  "keywords": [
+    "proxy"
+  ],
+  "author": "Zhenya Zhu",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^9.4.1",
+    "fs-extra": "^10.1.0",
+    "inquirer": "^9.1.4",
+    "qoa": "^0.2.0",
+    "shelljs": "^0.8.5"
+  },
+  "type": "module"
+}
