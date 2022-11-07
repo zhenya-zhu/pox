@@ -28,7 +28,7 @@ class DB {
 
     async writeDb(content){
         console.log(`write to file`, content)
-        return (await fse.writeJson(this.dbDir, content))
+        return (await fse.writeJson(this.dbDir, content, {spaces:4}))
     }
 
     async saveProfile(name, profile){
@@ -52,7 +52,7 @@ class DB {
     }
 
     async getProfiles(){
-        return await this.readDb()['profiles']
+        return (await this.readDb())['profiles']
     }
 
     async getCurrentProfile(){
