@@ -42,9 +42,7 @@ cli
 
     function autoCompleteUrl(mode) {
       return (userInput) => {
-        return userInput.startsWith(mode)
-          ? userInput
-          : `${mode}://${userInput}`;
+        return userInput;
       };
     }
 
@@ -86,7 +84,7 @@ cli
         // TODO: ls supported program
         break;
       case 'profiles':
-        profiles = await db.getProfiles();
+        let profiles = await db.getProfiles();
         // TODO: ls
         console.log(profiles);
         break;
