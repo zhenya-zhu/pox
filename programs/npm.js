@@ -9,8 +9,8 @@ class NPM extends Base{
                 'https': (url) => `npm config --global set https-proxy ${url}`,
             },
             stop: {
-                'http': 'npm config delete proxy',
-                'https': 'npm config delete https-proxy'
+                'http': 'npm config --global delete proxy',
+                'https': 'npm config --global delete https-proxy'
             },
             ls: 'npm config ls',
             supportedModes: ['http', 'https']
